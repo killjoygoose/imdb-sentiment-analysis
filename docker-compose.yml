@@ -1,0 +1,13 @@
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.21.3
+    user: 1000:1000
+    ports:
+      - 5000:5000
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --backend-store-uri "./mlruns"
+      --default-artifact-root ${MLFLOW_ARTIFACT_ROOT}
+    volumes:
+      - ./mlruns:/mlruns
