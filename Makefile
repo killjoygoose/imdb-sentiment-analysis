@@ -40,7 +40,7 @@ install:
 	poetry config virtualenvs.in-project true && \
 	poetry install --no-root && \
 	ls -l; \
-	source ./venv/bin/activate && \
+	source .venv/bin/activate && \
 	CMAKE_ARGS="-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS" pip install llama-cpp-python
 
 

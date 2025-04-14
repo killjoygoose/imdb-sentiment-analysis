@@ -263,8 +263,10 @@ stored in the pyproject.toml. To install them do:
 ```shell
 cd ~/<path>/<to>/imdb-sentiment-analysis; \
 pyenv local 3.11.3; \
+poetry config virtualenvs.create true; \
+poetry config virtualenvs.in-project true; \
 poetry install --no-root; \
-source ./venv/bin/activate; \
+source .venv/bin/activate; \
 CMAKE_ARGS="-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS" pip install llama-cpp-python;
 ```
 
@@ -276,7 +278,7 @@ created alongside the output if --run-evaluation is set. GPU availability is inf
 fully by setting 
 
 ```shell
-poetry run main.py --input_file data/subsample.jsonl --output_file /path/to/the/desired/output.jsonl # optional --run_evaluation  --run_on_cpu
+poetry run python main.py --input_file data/subsample.jsonl --output_file /path/to/the/desired/output.jsonl # optional --run_evaluation  --run_on_cpu
 ```
 
 
