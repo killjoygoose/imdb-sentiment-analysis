@@ -7,9 +7,9 @@ batch and single-prompt inference and logs timing and token usage.
 
 from typing import Any, Callable, Iterator, Iterable
 import logging
-from llama_cpp import Llama
 from tqdm import tqdm
 
+from mlflow_experiment.inference.model.llama_cpp_model import LlamaCppModel
 from mlflow_experiment.inference.postprocessing.binary_classification_output import (
     BinaryClassificationOutput,
 )
@@ -26,7 +26,7 @@ class InferencePipeline:
     classification task.
 
     Args:
-        model (Llama): The model used for inference.
+        model (LlamaCppModel): The model used for inference.
         system_prompt (str): The system prompt.
         user_prompt_builder (UserPromptBuilder): The user prompt builder.
         postprocessing_fn (optional, Callable[[str], str]): The function that parses the output
@@ -37,19 +37,21 @@ class InferencePipeline:
 
     def __init__(
         self,
-        model: Llama,
+        model: LlamaCppModel,
         system_prompt: str,
-        user_prompt_builder: UserPromptBuilder,
         postprocessing_fn: Callable[[str], BinaryClassificationOutput],
     ):
         self.model = model
         self._system_prompt = system_prompt
-        self.user_prompt_builder = user_prompt_builder
         self.postprocessing_fn = postprocessing_fn
 
     @property
     def base_user_prompt(self) -> str:
-        return self.user_prompt_builder.base_user_prompt
+        return self.model.base_user_prompt
+
+    @property
+    def model_name(self) -> str:
+        return self.model.model_name
 
     @property
     def system_prompt(self) -> str:
@@ -61,24 +63,19 @@ class InferencePipeline:
         """
         Run inference on a single data point.
         """
-        user_prompt = self.user_prompt_builder.build_user_prompt(user_prompt_content)
         _start = time()
 
-        output = self.model.create_chat_completion(
-            [
-                {"role": "system", "content": self._system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-            **inference_kwargs
+        output = self.model.run(
+            self._system_prompt, user_prompt_content, **inference_kwargs
         )
-        output_string = output["choices"][0]["message"]["content"]
+        output_string = output.content
 
         classification_output = self.postprocessing_fn(output_string)
 
         return InferenceOutput(
             output_string=output_string,
-            input_token_count=output["usage"]["prompt_tokens"],
-            output_token_count=output["usage"]["completion_tokens"],
+            input_token_count=output.prompt_tokens,
+            output_token_count=output.completion_tokens,
             elapsed_time=time() - _start,
             is_hallucination=classification_output.is_hallucination,
             is_wrong_format=classification_output.is_wrong_format,

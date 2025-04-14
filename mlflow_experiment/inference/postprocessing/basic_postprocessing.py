@@ -15,9 +15,9 @@ class BasicPostprocessing(Postprocessing):
         super().__init__(label_mapping)
         self.text_pruning_pattern = text_pruning_pattern or re.compile(r"[^a-zA-Z0-9]")
 
-    def __call__(self, model_output: str):
+    def _run(self, model_output: str) -> BinaryClassificationOutput:
         model_output = self.text_pruning_pattern.sub(" ", model_output).strip()
-        if len(model_output.split())>1:
+        if len(model_output.split()) > 1:
             return BinaryClassificationOutput(
                 label=-1, is_wrong_format=True, is_hallucination=False
             )
@@ -30,3 +30,6 @@ class BasicPostprocessing(Postprocessing):
             is_wrong_format=False,
             is_hallucination=False,
         )
+
+    def __call__(self, model_output: str) -> BinaryClassificationOutput:
+        return self._run(model_output)

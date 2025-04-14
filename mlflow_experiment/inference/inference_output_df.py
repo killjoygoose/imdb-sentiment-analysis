@@ -1,4 +1,4 @@
-from typing import Self
+from typing import Self, Iterable
 import pandas as pd
 
 from mlflow_experiment.inference.inference_output import InferenceOutput
@@ -58,5 +58,7 @@ class InferenceOutputDataframe:
         return getattr(self.data, item)
 
     @classmethod
-    def from_inference_outputs(cls, inference_outputs: list[InferenceOutput]) -> Self:
+    def from_inference_outputs(
+        cls, inference_outputs: Iterable[InferenceOutput]
+    ) -> Self:
         return pd.DataFrame([i.asdict() for i in inference_outputs])
