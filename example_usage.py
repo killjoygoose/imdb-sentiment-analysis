@@ -2,6 +2,7 @@ from llama_cpp import Llama
 import pandas as pd
 from langdetect import detect
 import dotenv
+
 dotenv.load_dotenv(".env", override=True)
 
 MODEL_PATH = "./models/Qwen2.5-1.5B-Instruct-Q5_K_M.gguf"
@@ -23,7 +24,13 @@ model = Llama(MODEL_PATH, verbose=False, n_ctx=32768)
 # ], logprobs=True)
 
 from mlflow_experiment import MlflowExperiment, EvaluationPipeline, InferencePipeline
-from mlflow_experiment.evaluation.metrics import accuracy_score, median_response_token_count, median_query_token_count, median_processing_time
+from mlflow_experiment.evaluation.metrics import (
+    accuracy_score,
+    median_response_token_count,
+    median_query_token_count,
+    median_processing_time,
+    median_tokens_per_second,
+)
 from mlflow_experiment.inference.prompt_building.basic_user_prompt_builder import (
     BasicUserPromptBuilder,
 )
@@ -31,11 +38,13 @@ from mlflow_experiment.inference.postprocessing.basic_postprocessing import (
     BasicPostprocessing,
 )
 
-ev_pipeline = EvaluationPipeline({"accuracy": accuracy_score,
-                                  "median_response_token_count": median_response_token_count,
-                                  "median_query_token_count": median_query_token_count,
-                                  "median_processing_time": median_processing_time
-                                  })
+ev_pipeline = EvaluationPipeline(
+    accuracy_score,
+    median_response_token_count,
+    median_query_token_count,
+    median_processing_time,
+    median_tokens_per_second,
+)
 prompt_builder = BasicUserPromptBuilder(
     "Output randomly either 1 or 0. Nothing more - just one of these numbers! Your output must be either '1' or '0'!"
 )
