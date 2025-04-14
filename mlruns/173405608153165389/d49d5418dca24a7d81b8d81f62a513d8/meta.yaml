@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/d49d5418dca24a7d81b8d81f62a513d8/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: d49d5418dca24a7d81b8d81f62a513d8
+run_name: chain-of-thought
+run_uuid: d49d5418dca24a7d81b8d81f62a513d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

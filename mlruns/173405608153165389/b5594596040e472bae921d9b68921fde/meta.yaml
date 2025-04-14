@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/b5594596040e472bae921d9b68921fde/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: b5594596040e472bae921d9b68921fde
+run_name: zero-shot-10-30-inputs-basic-no-special-delineators
+run_uuid: b5594596040e472bae921d9b68921fde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

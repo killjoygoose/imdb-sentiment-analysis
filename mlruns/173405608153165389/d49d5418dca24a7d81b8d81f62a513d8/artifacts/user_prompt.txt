@@ -1,0 +1,12 @@
+This is a movie review: {review}.
+    ----
+    Determine whether the overall sentiment of the review is positive or negative. You must look for evaluatory statements about the movie itself - e.g. "thrilling", "terrible acting", etc. These evaluatory statements are distinct from the movie genre! So be careful not to mistake descriptions about the genre. Take into account that different evaluatory statements might have different connation for different genres - e.g. a "terrifying movie" in the horror genre means a perfect movie, but in some other genre like commedy it might very well mean - rubbish movie.
+    ----
+    Summarize the parts of the review which provide such evaluatory statements in a few words (just a few words, please!) and after that state you final estimation given the statements you have just extracted. Your output should be in the following format:
+    EXAMPLE of correct format 1:
+    "The person generally loves action movies and this one provided great action sequences, beautiful cast and a lot of fast cars. Given these observations, my classification is: positive."
+    EXAMPLE of correct format 2:
+    "The person found this movie boring as the pace was very slow, whole sqeunces could have been cut and the worst of it was the dialogue which was abysmal. Given these observations, my classification is: negative."
+    ----
+    You must end your statement with: "my classification is:" followed by the "positive" (when the overall sentiment is positive) and "negative" (when the overall sentiment is negative). Follow the format correctly! Be very concise in you summary - just a few words, nothing more!!!
+    

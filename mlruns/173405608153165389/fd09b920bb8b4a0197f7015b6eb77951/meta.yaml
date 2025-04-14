@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/fd09b920bb8b4a0197f7015b6eb77951/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: fd09b920bb8b4a0197f7015b6eb77951
+run_name: few-shot
+run_uuid: fd09b920bb8b4a0197f7015b6eb77951
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

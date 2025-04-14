@@ -1,0 +1,2 @@
+This is a movie review: {review}. Determine whether the overall sentiment of the review is positive or negative. Your output: your output should be either "positive" (if the overall sentiment is positive) or "negative" (if the overall sentiment is negative). Do not output nothing more. Output only "positive" or "negative"!
+    

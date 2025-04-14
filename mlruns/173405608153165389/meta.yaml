@@ -1,0 +1,8 @@
+artifact_location: file:///home/sixkai/imdb-sentiment-analysis/mlruns/173405608153165389
+creation_time: 1744453786095
+end_time: 1744612975297
+experiment_id: '173405608153165389'
+last_update_time: 1744453786095
+lifecycle_stage: active
+name: zero-shot-few-shot-prompting
+start_time: 1744612975297

@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/df325a1886a8479caba2425586a09315/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: df325a1886a8479caba2425586a09315
+run_name: zero-shot-numeric-output
+run_uuid: df325a1886a8479caba2425586a09315
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/34ede87304d24227b83851d3b7edb225/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: 34ede87304d24227b83851d3b7edb225
+run_name: chain-of-thought-thorough-negative-example
+run_uuid: 34ede87304d24227b83851d3b7edb225
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

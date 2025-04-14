@@ -1,0 +1,12 @@
+This is a movie review: {review}.
+    ----
+    Determine whether the overall sentiment of the review is positive or negative. You must look for evaluatory statements about the movie itself - e.g. "thrilling", "terrible acting", etc. These evaluatory statements are distinct from the movie genre! So be careful not to mistake descriptions about the genre. Take into account that different evaluatory statements might have different connation for different genres - e.g. a "terrifying movie" in the horror genre means a perfect movie, but in some other genre like commedy it might very well mean - rubbish movie. In the following you will recieve a few examples for each case.
+    ----
+    EXAMPLES:
+    - NEGATIVE (negative): "Oh My Gosh!!!! This was the first movie Broken Lizard made as a group (although it just recently came to video), and I really do, but that movie is by far the worst one they've made. Club Dread was a pretty good movie, but this one, just wow. I'd highly recommend Super Troopers if you want a good laugh, but if you want more of a romance, drama, with a few funny spots, I'd say go with Puddle Cruiser. Just my opinion though, everyone is entitled to their own! :)"
+    - POSITIVE (positive): 'Now I myself had previously seen a few episodes of the Leauge Of Gentleman Leauge Of Gentleman get this film it will make you laugh and this is a film that can be watched more then once and is an excellent film to watch with your mates. It truly deserves it review a definite 10 out of 10.'
+    - NEGATIVE (negative): "The animation was good, the imagery was good, although not totally original, you will like it, but frankly, I've been spoiled by much more creative stories that actually have some sort message to tell. Go rent a Miyazaki film and watch it twice, you'll get way more out of it."
+    - POSITIVE (positive): "This is an excellent, heartbreaking movie. It is by far the best I've seen both of them. The authentic locations are remarkable. The camera work is interesting and different. There are many famous Latin actors in the cast, making it all the more interesting for people familiar with Latin American cinema. I highly recommend this movie."
+    ----
+    Your output: your output should be either "positive" (if the overall sentiment is positive) or "negative" (if the overall sentiment is negative). Do not output nothing more. Output only "positive" or "negative"!
+    

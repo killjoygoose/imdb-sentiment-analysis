@@ -1,0 +1,15 @@
+artifact_uri: /mlruns/173405608153165389/a2e8386b20244062b9ce304bfdfbec8b/artifacts
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: active
+run_id: a2e8386b20244062b9ce304bfdfbec8b
+run_name: zero-shot1-t1.0-k40-p0.0
+run_uuid: a2e8386b20244062b9ce304bfdfbec8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 3
+tags: []
+user_id: sixkai

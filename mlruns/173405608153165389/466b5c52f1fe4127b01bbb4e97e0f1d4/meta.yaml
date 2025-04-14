@@ -1,0 +1,16 @@
+artifact_uri: /mlruns/173405608153165389/466b5c52f1fe4127b01bbb4e97e0f1d4/artifacts
+deleted_time: 1744463787911
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: deleted
+run_id: 466b5c52f1fe4127b01bbb4e97e0f1d4
+run_name: zero-shot-prompting
+run_uuid: 466b5c52f1fe4127b01bbb4e97e0f1d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 4
+tags: []
+user_id: sixkai

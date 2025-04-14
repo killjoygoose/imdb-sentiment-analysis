@@ -1,0 +1,16 @@
+artifact_uri: /mlruns/173405608153165389/92414a622738404a86515a1904620700/artifacts
+deleted_time: 1744546273555
+end_time: 1744612975297
+entry_point_name: ''
+experiment_id: '173405608153165389'
+lifecycle_stage: deleted
+run_id: 92414a622738404a86515a1904620700
+run_name: zero-shot
+run_uuid: 92414a622738404a86515a1904620700
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744612975297
+status: 4
+tags: []
+user_id: sixkai

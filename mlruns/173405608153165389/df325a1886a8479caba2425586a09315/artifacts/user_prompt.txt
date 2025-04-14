@@ -1,0 +1,6 @@
+This is a movie review: {review}.
+    ----
+    Determine whether the overall sentiment of the review is positive or negative. You must look for evaluatory statements about the movie itself - e.g. "thrilling", "terrible acting", etc. These evaluatory statements are distinct from the movie genre! So be careful not to mistake descriptions about the genre. Take into account that different evaluatory statements might have different connation for different genres - e.g. a "terrifying movie" in the horror genre means a perfect movie, but in some other genre like commedy it might very well mean - rubbish movie.
+    ----
+    Your output: your output should be either "1" (if the overall sentiment is positive) or "0" (if the overall sentiment is negative). Do not output nothing more. Output only "1" or "0"!
+    
