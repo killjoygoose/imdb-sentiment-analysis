@@ -242,6 +242,9 @@ However, no noticeable difference was observered:
 
 # Setup
 
+Set the `MLFLOW_ARTIFACT_ROOT`=file://</home/path/imdb-sentiment-analysis/mlruns> to point to the absolute path of mlruns.
+Unfortunately there is a bug in mlflow, which prevents any other format, when running locally.
+
 To set up the project you have to have a python version of ^3.11. If you don't you best install `pyenv` with the following
 commands:
 ```shell
